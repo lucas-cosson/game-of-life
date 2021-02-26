@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simulateur du jeu de la vie</title>
+    <link rel="stylesheet" type="text/css" href="jeudelavie.css">
+    <script src="jeudelavie.js"></script>
+</head>
+
+<body>
+    <main>
+        <form>
+            <p>Taille de la grille : <br>
+                <select id="selResolution" name="resolution">
+                    <option value="100">100x100</option>
+                    <option value="50">50x50</option>
+                    <option value="25" selected>25x25</option>
+                </select>
+            </p>
+            
+            <p>Vitesse :<br>
+                <label><input type="radio" name="radSpeed" value="1000"> Lente</label><br>
+                <label><input type="radio" name="radSpeed" value="500" checked> Moyenne</label><br>
+                <label><input type="radio" name="radSpeed" value="250"> Rapide</label>
+            </p>
+            
+            <p>Couleurs des cellules :<br>
+                <input type="checkbox" checked disabled> <input type="color" id="colorBase" value="#000000"> base <br>
+                <input type="checkbox" id="cbNew"> <input type="color" id="colorNew" value="#00FF00"> <label for="cbNew">nouvelles</label><br>
+                <input type="checkbox" id="cbDying"> <input type="color" id="colorDying" value="#FF0000"> <label for="cbDying">condamnées</label>
+            </p>
+        </form>        
+        
+        <canvas id="cvs" width="600" height="600">Votre (vieux) navigateur ne supporte pas les canvas.</canvas>
+        
+        <aside>
+            <button id="btnClear" title="Réinitialiser">&#x1F504;</button>
+            <button id="btnReset" title="Revenir au motif avant animation">&#x23EE;</button>
+            <button id="btnPlay" title="Lancer l'animation">▶️</button>
+            <button id="btnStop" title="Arrêter l'animation">&#x23F9;</button>
+            <button id="btnNext" title="Animation pas-à-pas">&#x23E9;</button>
+        </aside>
+    </main>
+</body>
+
+</html>
